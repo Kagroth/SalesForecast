@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+	<meta name="author" content="">
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'Predictor/css/index.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'Predictor/css/animate.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <title>Aplikacje internetowe 2</title>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background-image: url({% static 'Predictor/images/baner.jpg' %})">
+	    <div class="container-fluid">
+		    <div>
+		    	<h1 style="color: white">Aplikacja do predykcji ilości sprzedaży</h1>
+			</div>
+        </div>
+    </header>
+
+    <!-- Opis -->
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+			  <h4> Aby dokonać analizy swoich danych załącz plik w formacie JSON:</h4><br>
+	    	</div>
+		</div>
+    </div>
+
+    <!-- Zawartosc aplikacji -->
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-12">
+                    <div id="appContainer" class="text-center">
+                        <div id="uploadFileContainer" class="text-center">
+                            <div>
+                                <form id="dataFileForm">
+                                    {% csrf_token %}
+                                    <input type="file" name="dataFile" id="dataFile" accept="application/json"/><br><br>
+                                    <button type="submit" id="fileSendButton" class="btn btn-danger" disabled>Analizuj</button>
+                                </form>
+                            </div>
+                            <div id="dataFileInfo">
+
+                            </div>
+                        </div>
+
+                        <div id="processingContainer" class="hidden text-center">
+                            <h4>Prosze czekac, trwa przetwarzanie danych</h4><br>
+                            <img src="{% static 'Predictor/gifs/loading.gif'%}"/>
+                        </div>
+                        <div id="chartContainer" class="hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+	<footer>
+		<div class="footer_desc">
+			<span>Wykonali: Kamil Bania, Adrian Gajewski, Krzysztof Duda</span>
+			<br>
+			<span>Aplikacje internetowe 2, Informatyka III Lab3 2018/2019</span>
+	    </div>
+    </footer>
+
+    <script src="{% static 'Predictor/js/canvasjs.min.js'%}"></script>
+    <script src="{% static 'Predictor/js/canvasjs.react.js'%}"></script>
+    <script src="{% static 'Predictor/js/jquery.canvasjs.min.js'%}"></script>
+    <script src="{% static 'Predictor/js/Controller.js' %}"></script>
+    <script>
+        window.addEventListener('load', ()=>{
+            let appController = new Controller(document.querySelector('#appContainer'),
+                                               document.querySelector('#dataFileForm'));
+
+            appController.init();
+        }, false);
+    </script>
+</body>
+</html>

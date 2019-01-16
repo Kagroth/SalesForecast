@@ -1,0 +1,74 @@
+{
+	"styczen": {
+		"produktA": 10,
+		"produktB": 20,
+		"produktC": 30,
+		"produktD": 40
+	},
+	"luty": {
+		"produktA": 25,
+		"produktB": 36,
+		"produktC": 48,
+		"produktD": 18
+	},
+	"marzec": {
+		"produktA": 14,
+		"produktB": 24,
+		"produktC": 64,
+		"produktD": 20
+	},
+	"kwiecien": {
+		"produktA": 9,
+		"produktB": 7,
+		"produktC": 23,
+		"produktD": 43
+	},
+	"maj": {
+		"produktA": 98,
+		"produktB": 112,
+		"produktC": 98,
+		"produktD": 68
+	},
+	"czerwiec": {
+		"produktA": 80,
+		"produktB": 79,
+		"produktC": 78,
+		"produktD": 77
+	},
+	"lipiec": {
+		"produktA": 45,
+		"produktB": 65,
+		"produktC": 34,
+		"produktD": 57
+	},
+	"sierpien": {
+		"produktA": 24,
+		"produktB": 54,
+		"produktC": 40,
+		"produktD": 16
+	},
+	"wrzesien": {
+		"produktA": 10,
+		"produktB": 19,
+		"produktC": 20,
+		"produktD": 6
+	},
+	"pazdziernik": {
+		"produktA": 34,
+		"produktB": 7,
+		"produktC": 17,
+		"produktD": 15
+	},
+	"listopad": {
+		"produktA": 23,
+		"produktB": 77,
+		"produktC": 101,
+		"produktD": 34
+	},
+	"grudzien": {
+		"produktA": 45,
+		"produktB": 101,
+		"produktC": 105,
+		"produktD": 50
+	}
+}
